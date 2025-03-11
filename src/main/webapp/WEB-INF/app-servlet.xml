@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-</beans>
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 패키지를 스캔하여 component 라고 돼 있는 파일들을 자동으로 등록 시킴-->
+  <context:component-scan base-package="org.codenova.spring.controller"/>
+
+    <!-- handler mapping (요청을 처리하는 기법) -->
+     <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" id="handlerMapping"/>
+
+
+     <bean class="org.codenova.spring.controller.IndexHandler" id="/index"/>
+ </beans>
