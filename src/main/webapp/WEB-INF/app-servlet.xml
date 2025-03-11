@@ -8,8 +8,13 @@
   <context:component-scan base-package="org.codenova.spring.controller"/>
 
     <!-- handler mapping (요청을 처리하는 기법) -->
-     <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" id="handlerMapping"/>
-
-
-     <bean class="org.codenova.spring.controller.IndexHandler" id="/index"/>
- </beans>
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping" id="handlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/index">indexHandler</prop>
+                <prop key="/help">helpHandler</prop>
+            </props>
+        </property>
+    </bean>
+    <bean class="org.codenova.spring.controller.IndexHandler" id="indexHandler"/>
+</beans>
