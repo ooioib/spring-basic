@@ -10,20 +10,15 @@ import org.springframework.web.servlet.ModelAndView;
 public class UserController {
 
     @RequestMapping("/join")
-    public ModelAndView joinHandle() {
+    public void joinHandle() {
         System.out.println("UserController.joinHandle");
-
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("user/join");
-
-        return mav;
     }
 
     @RequestMapping("/join/proceed")
     public String joinProceedHandle() {
         System.out.println("UserController.joinProceedHandle");
 
-        // view 이름 리턴 시킬 때 redirect: 를 붙이면 sendRedirect 처리를 해줌
+        // view 이름 리턴시킬때  redirect:  를 붙이면 sendRedirect 처리를 해줌.
         return "redirect:/";
     }
 }
