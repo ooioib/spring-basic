@@ -20,7 +20,10 @@ public class UserController {
     }
 
     @RequestMapping("/join/proceed")
-    public void joinProceedHandle() {
+    public String joinProceedHandle() {
         System.out.println("UserController.joinProceedHandle");
+
+        // view 이름 리턴 시킬 때 redirect: 를 붙이면 sendRedirect 처리를 해줌
+        return "redirect:/";
     }
 }
