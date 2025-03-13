@@ -3,7 +3,7 @@ package org.codenova.spring.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import org.codenova.model.TravelSchedule;
+import org.codenova.spring.model.TravelSchedule;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -116,7 +116,6 @@ public class StudyController {
         System.out.println("StudyController.studySixHandle()");
         System.out.println(schedule.toString());
     }
-
 
      /*
         @PathVariable

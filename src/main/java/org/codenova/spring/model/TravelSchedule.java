@@ -1,4 +1,4 @@
-package org.codenova.model;
+package org.codenova.spring.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -15,7 +15,6 @@ public class TravelSchedule {
     private int trafficCost;
     private int stayCost;
     private int foodCost;
-
-    private boolean planned;
+    private int otherCost;
 
 }

@@ -1,4 +1,4 @@
-package org.codenova.spring.controller.parking;
+package org.codenova.spring.controller.practice;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
