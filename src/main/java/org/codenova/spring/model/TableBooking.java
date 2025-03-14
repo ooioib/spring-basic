@@ -20,7 +20,7 @@ public class TableBooking {
     @Max(6)
     private int guests;  // 예약 인원
 
-    @Future
+    @Future // 오늘 날짜 포함 (Past, Future)
     private LocalDate bookingDate;  // 예약 날짜
 
     @Email  // 이메일 사용 해야 함

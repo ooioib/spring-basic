@@ -5,16 +5,25 @@
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <context:component-scan base-package="org.codenova.spring.controller"/>
+    <context:component-scan base-package="org.codenova.spring"/>
     <mvc:annotation-driven/>
 
     <!--  register HanlderMapping  -->
-    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" id="handlerMapping"/>
-
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"
+          id="handlerMapping"/>
 
     <!--  register ViewResolver  -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="viewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--  register datasource  -->
+    <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://database.cpmkaio4y6nw.ap-northeast-2.rds.amazonaws.com:3306/playground"/>
+        <property name="username" value="admin"/>
+        <property name="password" value="1q2w3e4r"/>
+
     </bean>
 </beans>
