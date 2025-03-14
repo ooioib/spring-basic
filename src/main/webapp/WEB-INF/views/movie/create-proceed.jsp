@@ -8,13 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Movie</title>
+    <title>Movie 상영작</title>
 </head>
 <body>
-<h1>Movie</h1>
+<h1>Movie 상영작</h1>
 <p>
 <form action="${pageContext.request.contextPath}/create-proceed">
-    <p>
 
+
+    <p>
 </body>
 </html>

@@ -21,13 +21,14 @@ public class MovieRepository {
         try {
             Connection conn = dataSource.getConnection();
             PreparedStatement ps = conn.prepareStatement("insert into movies values (null, ?, ?, ?, ?)");
+            // 이렇게도 가능 ("insert into movie (title, description, genre, release_date) value (?, ?, ?, ?)")
 
             ps.setString(1, movie.getTitle());
             ps.setString(2, movie.getDescription());
             ps.setString(3, movie.getGenre());
             ps.setDate(4, Date.valueOf(movie.getReleaseDate()));
 
-            int r = ps.executeUpdate();
+            ps.executeUpdate();
 
             result = true;
 
